@@ -84,3 +84,10 @@ To replicate this deployment on a local cluster (e.g., Minikube or Kind):
         ```bash
         minikube service web-frontend-service -n <YOUR-NAMESPACE>
         ```
+---
+
+## 🖼️ Screenshots
+<img width="1920" height="1080" alt="Screenshot (107)" src="https://github.com/user-attachments/assets/29bc6660-0a64-4c93-83d1-3363872ac768" />
+<img width="1920" height="1080" alt="Screenshot (106)" src="https://github.com/user-attachments/assets/8c7f9a07-489c-4149-95de-cba49002b96d" />
+<img width="1920" height="1080" alt="Screenshot (108)" src="https://github.com/user-attachments/assets/3753c968-a8ab-4af3-bc2c-1a2d662634b7" />
+
