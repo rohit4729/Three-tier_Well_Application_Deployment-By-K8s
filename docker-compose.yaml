@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+ mongo:
+   image: mongo:6
+   container_name: mongo
+   ports: ["27017:27017"]
+ user-service:
+   build: ./user-service
+   environment:
+     - MONGO_URL=mongodb://mongo:27017/micro-users
+   depends_on: [mongo]
+   ports: ["4000:4000"]
+ auth-service:
+   build: ./auth-service
+   environment:
+     - USER_SERVICE_URL=http://user-service:4000
+   depends_on: [user-service]
+   ports: ["5000:5000"]
+ web-frontend:
+   build: ./web-frontend
+   depends_on: [auth-service, user-service]
+   ports: ["8080:80"]
+
